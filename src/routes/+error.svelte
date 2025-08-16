@@ -1,4 +1,5 @@
 <script>
+    import { resolve } from "$app/paths";
     export let status;
 </script>
 
@@ -15,7 +16,7 @@
         申し訳ございません。<br />指定されたページへアクセスできません。
     </p>
     <a
-        href="/"
+        href={resolve("/")}
         class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700"
     >
         トップへ戻る
