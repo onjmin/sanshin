@@ -161,7 +161,7 @@
     <!-- お土産セクション -->
     <section>
         <h2 class="text-3xl font-bold text-emerald-700 text-center mb-8">
-            岬矢のお土産候補
+            岬矢のお土産
         </h2>
         <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {#each souvenirList as s}
