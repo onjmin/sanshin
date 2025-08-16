@@ -29,29 +29,14 @@
 			<!-- ナビゲーション -->
 			<nav class="flex items-center gap-6 text-sm font-medium">
 				<a
-					href="company"
-					class="text-gray-700 hover:text-emerald-700 transition-colors"
-					>会社概要</a
-				>
-				<a
 					href="timetable"
 					class="text-gray-700 hover:text-emerald-700 transition-colors"
-					>運行時間</a
+					>時刻表</a
 				>
 				<a
 					href="news"
 					class="text-gray-700 hover:text-emerald-700 transition-colors"
 					>ニュース</a
-				>
-				<a
-					href="service"
-					class="text-gray-700 hover:text-emerald-700 transition-colors"
-					>事業内容</a
-				>
-				<a
-					href="contact"
-					class="text-gray-700 hover:text-emerald-700 transition-colors"
-					>お問い合わせ</a
 				>
 			</nav>
 		</div>
