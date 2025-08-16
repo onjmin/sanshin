@@ -1,58 +1,77 @@
+<!-- src/routes/+layout.svelte -->
 <script lang="ts">
+	import "../app.css";
 	export let data;
 </script>
 
-<div class="min-h-dvh flex flex-col bg-gray-50 text-gray-900">
-	<header
-		class="border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60"
-	>
+<div class="min-h-dvh flex flex-col bg-gray-50 text-gray-900 antialiased">
+	<!-- ヘッダー -->
+	<header class="bg-white/90 backdrop-blur border-b border-emerald-600/40">
 		<div
-			class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between gap-4"
+			class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4"
 		>
-			<a
-				href="/"
-				class="inline-flex items-center gap-2 font-semibold text-lg tracking-tight"
-			>
+			<!-- ロゴ -->
+			<a href="/" class="flex items-center gap-3">
 				<span
-					class="inline-grid place-items-center w-8 h-8 rounded-xl bg-emerald-600 text-white font-bold"
-					>SS</span
+					class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-emerald-700 text-white font-bold text-lg shadow"
 				>
-				<span>三蔵新山株式会社</span>
+					SS
+				</span>
+				<span
+					class="font-semibold text-xl tracking-tight text-emerald-800"
+				>
+					三蔵新山株式会社
+				</span>
 			</a>
-			<nav class="flex items-center gap-5 text-sm">
-				<a href="/" class="hover:underline underline-offset-4"
+
+			<!-- ナビゲーション -->
+			<nav class="flex items-center gap-6 text-sm font-medium">
+				<a
+					href="/"
+					class="text-gray-700 hover:text-emerald-700 transition-colors"
 					>会社概要</a
 				>
-				<a href="/news" class="hover:underline underline-offset-4"
+				<a
+					href="/news"
+					class="text-gray-700 hover:text-emerald-700 transition-colors"
 					>ニュース</a
 				>
-				<a href="/contact" class="hover:underline underline-offset-4"
+				<a
+					href="/service"
+					class="text-gray-700 hover:text-emerald-700 transition-colors"
+					>事業内容</a
+				>
+				<a
+					href="/contact"
+					class="text-gray-700 hover:text-emerald-700 transition-colors"
 					>お問い合わせ</a
 				>
 			</nav>
 		</div>
+
+		<!-- 下ライン（鉄道のレールをイメージ） -->
+		<div
+			class="h-1 bg-gradient-to-r from-emerald-600 via-cyan-500 to-emerald-600"
+		></div>
 	</header>
 
+	<!-- メイン -->
 	<main class="flex-1">
 		<slot />
 	</main>
 
-	<footer class="border-t bg-white">
+	<!-- フッター -->
+	<footer class="border-t bg-white mt-12">
 		<div
-			class="max-w-5xl mx-auto px-4 py-6 text-sm text-gray-600 flex flex-wrap items-center justify-between gap-3"
+			class="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-600 flex flex-col sm:flex-row items-center justify-between gap-4"
 		>
 			<p>
-				© {new Date().getFullYear()} 三蔵新山株式会社（Sanzō‑Shinzan Co.,
+				© {new Date().getFullYear()} 三蔵新山株式会社（Sanzō-Shinzan Co.,
 				Ltd.）
 			</p>
-			<p class="italic">スローガン：『都市と自然を、やさしくむすぶ』</p>
+			<p class="italic text-emerald-700">
+				「都市と自然を、やさしくむすぶ」
+			</p>
 		</div>
 	</footer>
 </div>
-
-<style>
-	/* 画面幅が極端に広いときの可読性確保 */
-	:global(body) {
-		@apply antialiased;
-	}
-</style>
