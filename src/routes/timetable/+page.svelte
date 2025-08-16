@@ -50,11 +50,11 @@
             </div>
             <div class="flex-1 min-w-[300px]">
                 <h2 class="text-lg font-semibold text-emerald-700 mb-2">
-                    路線マップ（ぐるっと型）
+                    三蔵新三鉄道のレトロ車両、マルタ96
                 </h2>
                 <img
-                    src="https://i.imgur.com/734TryY.png"
-                    alt="円形路線図"
+                    src="https://i.imgur.com/gnxdDLE.jpeg"
+                    alt="三蔵新三鉄道のレトロ車両、マルタ96"
                     class="rounded-xl shadow-lg border border-gray-200 w-full object-contain"
                 />
             </div>
