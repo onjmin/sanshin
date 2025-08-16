@@ -1,6 +1,6 @@
 <script lang="ts">
     const profile: { label: string; value: string }[] = [
-        { label: "社名", value: "三蔵新山株式会社（Sanzō‑Shinzan Co., Ltd.）" },
+        { label: "社名", value: "三蔵新山株式会社（Sanzō-Shinzan Co., Ltd.）" },
         { label: "略称", value: "三新（さんしん）、SS鉄道" },
         { label: "本社所在地", value: "東京都文京区三山町1-45（架空住所）" },
         { label: "設立", value: "1957年（昭和32年）5月1日" },
@@ -11,32 +11,41 @@
     ];
 </script>
 
-<section class="relative overflow-hidden">
-    <div
-        class="absolute inset-0 -z-10 opacity-30 pointer-events-none select-none"
-    >
+<section
+    class="relative bg-gradient-to-b from-emerald-50 to-white min-h-screen"
+>
+    <!-- ヒーローヘッダー -->
+    <div class="relative overflow-hidden bg-emerald-700 text-white">
+        <div class="max-w-6xl mx-auto px-6 py-16 md:py-24 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight">
+                三蔵新山株式会社
+            </h1>
+            <p class="mt-4 text-lg md:text-xl opacity-90">
+                都市と自然を、やさしくむすぶ
+            </p>
+        </div>
+        <!-- 路線をイメージした装飾ライン -->
         <div
-            class="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-emerald-200 blur-3xl"
-        ></div>
-        <div
-            class="absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-cyan-200 blur-3xl"
+            class="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-emerald-600 via-cyan-500 to-emerald-600"
         ></div>
     </div>
 
+    <!-- コンテンツ -->
     <div class="max-w-5xl mx-auto px-4 py-12 md:py-16">
-        <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-2">
+        <h2
+            class="text-2xl md:text-3xl font-semibold text-emerald-800 mb-6 border-l-4 border-emerald-600 pl-3"
+        >
             会社概要
-        </h1>
-        <p class="text-gray-600 mb-8">
-            Sanzō‑Shinzan Co., Ltd.（略称：三新／SS鉄道）の基本情報です。
-        </p>
+        </h2>
 
         <div
-            class="bg-white shadow-sm ring-1 ring-gray-200 rounded-2xl overflow-hidden"
+            class="bg-white shadow-lg ring-1 ring-gray-200 rounded-2xl overflow-hidden"
         >
             <dl class="divide-y divide-gray-200">
                 {#each profile as item}
-                    <div class="grid grid-cols-1 md:grid-cols-4">
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-4 hover:bg-emerald-50 transition-colors"
+                    >
                         <dt
                             class="bg-gray-50 md:col-span-1 px-4 py-3 font-medium text-gray-600"
                         >
@@ -48,23 +57,31 @@
             </dl>
         </div>
 
-        <!-- 補足情報（任意）：カードでサマリー表示 -->
-        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="bg-white rounded-2xl ring-1 ring-gray-200 p-4">
-                <p class="text-xs text-gray-500">設立</p>
-                <p class="text-lg font-semibold">1957年5月1日</p>
+        <!-- サマリーカード -->
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
+                class="bg-white rounded-xl shadow ring-1 ring-gray-200 p-5 text-center"
+            >
+                <p class="text-sm text-gray-500">設立</p>
+                <p class="text-xl font-bold text-emerald-700">1957年5月1日</p>
             </div>
-            <div class="bg-white rounded-2xl ring-1 ring-gray-200 p-4">
-                <p class="text-xs text-gray-500">資本金</p>
-                <p class="text-lg font-semibold">150億円</p>
+            <div
+                class="bg-white rounded-xl shadow ring-1 ring-gray-200 p-5 text-center"
+            >
+                <p class="text-sm text-gray-500">資本金</p>
+                <p class="text-xl font-bold text-emerald-700">150億円</p>
             </div>
-            <div class="bg-white rounded-2xl ring-1 ring-gray-200 p-4">
-                <p class="text-xs text-gray-500">従業員数</p>
-                <p class="text-lg font-semibold">約3,400名</p>
+            <div
+                class="bg-white rounded-xl shadow ring-1 ring-gray-200 p-5 text-center"
+            >
+                <p class="text-sm text-gray-500">従業員数</p>
+                <p class="text-xl font-bold text-emerald-700">約3,400名</p>
             </div>
-            <div class="bg-white rounded-2xl ring-1 ring-gray-200 p-4">
-                <p class="text-xs text-gray-500">略称</p>
-                <p class="text-lg font-semibold">三新／SS鉄道</p>
+            <div
+                class="bg-white rounded-xl shadow ring-1 ring-gray-200 p-5 text-center"
+            >
+                <p class="text-sm text-gray-500">略称</p>
+                <p class="text-xl font-bold text-emerald-700">三新／SS鉄道</p>
             </div>
         </div>
     </div>
@@ -74,6 +91,6 @@
     <title>会社概要 | 三蔵新山株式会社</title>
     <meta
         name="description"
-        content="三蔵新山株式会社（Sanzō‑Shinzan Co., Ltd.）の会社概要。設立、資本金、所在地、代表者、従業員数などの基本情報。"
+        content="三蔵新山株式会社（Sanzō-Shinzan Co., Ltd.）の会社概要。設立、資本金、所在地、代表者、従業員数などの基本情報。"
     />
 </svelte:head>
