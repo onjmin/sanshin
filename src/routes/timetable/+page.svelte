@@ -53,7 +53,7 @@
                     三蔵新三鉄道のレトロ車両、マルタ96
                 </h2>
                 <img
-                    src="https://i.imgur.com/gnxdDLE.jpeg"
+                    src="https://i.imgur.com/wNRCXO8.jpeg"
                     alt="三蔵新三鉄道のレトロ車両、マルタ96"
                     class="rounded-xl shadow-lg border border-gray-200 w-full object-contain"
                 />

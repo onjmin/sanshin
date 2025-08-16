@@ -10,7 +10,7 @@
         <!-- 背景画像 (半透明) -->
         <div
             class="absolute inset-0 bg-cover bg-center opacity-50"
-            style="background-image: url('https://i.imgur.com/gnxdDLE.jpeg');"
+            style="background-image: url('https://i.imgur.com/wNRCXO8.jpeg');"
         ></div>
 
         <!-- コンテンツ -->
