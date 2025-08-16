@@ -33,7 +33,7 @@
             "学生・フリーター・主婦（夫）歓迎",
             "Wワーク・扶養内勤務も相談OK",
         ],
-        contact: "店頭かメールでご連絡ください。メール：適当",
+        contact: `店頭か<a href="mailto:onjmin931@gmail.com?subject=釣りだよ" class="text-blue-600 underline">メール</a>でご連絡ください。`,
         message:
             "長時間シフトを支えるスタッフを大募集。待遇・環境充実で働きやすさも◎",
     };
@@ -131,6 +131,11 @@
                 {/if}
 
                 {#if card.isNote}
+                    <p
+                        class="mt-2 text-gray-600 italic border-l-4 border-purple-400 pl-3"
+                    >
+                        {@html card.content[0]}
+                    </p>
                     <p
                         class="mt-2 text-gray-600 italic border-l-4 border-purple-400 pl-3"
                     >
