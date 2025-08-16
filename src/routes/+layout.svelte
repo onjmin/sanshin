@@ -14,11 +14,11 @@
 		>
 			<!-- ロゴ -->
 			<a href={resolve("/")} class="flex items-center gap-3">
-				<span
-					class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-emerald-700 text-white font-bold text-lg shadow"
-				>
-					SS
-				</span>
+				<img
+					src="https://i.imgur.com/A1jWadO.png"
+					alt="三蔵新山株式会社"
+					class="w-10 h-10 rounded-lg shadow"
+				/>
 				<span
 					class="font-semibold text-xl tracking-tight text-emerald-800"
 				>
