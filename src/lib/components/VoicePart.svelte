@@ -1,0 +1,110 @@
+<script lang="ts">
+    interface Voice {
+        type: "感想" | "批評";
+        name: string;
+        age?: string;
+        occupation?: string;
+        location?: string;
+        text: string;
+    }
+
+    const voices: Voice[] = [
+        {
+            type: "感想",
+            name: "30代・会社員",
+            location: "東京都世田谷区",
+            text: "通勤で毎日SS鉄道を利用しています。ダイヤの正確さと、車内の清潔感にはいつも感心しています。都心と郊外を結ぶ路線として、なくてはならない存在です。",
+        },
+        {
+            type: "感想",
+            name: "40代・観光客",
+            location: "大阪府在住",
+            text: "東京観光の際にSS鉄道を使いました。車窓から見える緑豊かな景色が印象的で、まるで小旅行気分でした。観光案内も充実していて、初めてでも安心して乗れました。",
+        },
+        {
+            type: "感想",
+            name: "50代・フリーランス",
+            location: "埼玉県在住",
+            text: "沿線の開発と環境保全を両立している姿勢に共感しています。『都市と自然を、やさしくむすぶ』というスローガン、そのままだと思います。",
+        },
+        {
+            type: "感想",
+            name: "10代・高校生",
+            location: "東京都北区",
+            text: "SS鉄道のキャラクターが可愛くて好きです！駅のスタンプ集めも楽しくて、友達とよく出かけます。",
+        },
+
+        {
+            type: "批評",
+            name: "学生",
+            age: "20代",
+            occupation: "大学生",
+            text: "運賃が少し高めに感じます。定期券以外の割引制度をもっと充実させてほしいです。",
+        },
+        {
+            type: "批評",
+            name: "地元住民",
+            age: "50代",
+            occupation: "自営業",
+            text: "郊外路線の本数が少なくて、夜遅くの帰宅が不便。ダイヤの見直しをしてほしい。",
+        },
+        {
+            type: "批評",
+            name: "利用頻度の高いビジネスマン",
+            age: "40代",
+            occupation: "営業職",
+            text: "車両は清潔で快適だけど、Wi-Fi環境がもう少し安定すると助かります。リモートワークが増えているので。",
+        },
+        {
+            type: "批評",
+            name: "高等学校生",
+            age: "10代",
+            text: "いつも浜町から乗っているのですが少し周りがうるさいので何とかしてほしいです。",
+        },
+        {
+            type: "批評",
+            name: "40代・主婦",
+            text: "女性専用車両がないことから女性への配慮が足りていないと思いますがこれは差別ではないのですか？",
+        },
+    ];
+</script>
+
+<section class="bg-emerald-50 py-12">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-emerald-700 mb-8 text-center">
+            利用者の声
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            {#each voices as v}
+                <div
+                    class="bg-white rounded-2xl shadow p-6 hover:shadow-lg transition-shadow"
+                >
+                    <div class="flex items-center justify-between mb-3">
+                        <div>
+                            <p class="font-semibold text-gray-800">
+                                {v.name}{v.age
+                                    ? ` (${v.age})`
+                                    : ""}{v.occupation
+                                    ? `・${v.occupation}`
+                                    : ""}
+                            </p>
+                            {#if v.location}
+                                <p class="text-gray-500 text-sm">
+                                    {v.location}
+                                </p>
+                            {/if}
+                        </div>
+                        <span
+                            class="text-xs px-2 py-1 rounded-full {v.type ===
+                            '感想'
+                                ? 'bg-emerald-100 text-emerald-800'
+                                : 'bg-red-100 text-red-700'}">{v.type}</span
+                        >
+                    </div>
+                    <p class="text-gray-700 text-sm">{v.text}</p>
+                </div>
+            {/each}
+        </div>
+    </div>
+</section>

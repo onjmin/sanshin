@@ -1,4 +1,6 @@
 <script lang="ts">
+    import VoicePart from "$lib/components/VoicePart.svelte";
+
     const profile: { label: string; value: string }[] = [
         { label: "社名", value: "三蔵新山株式会社（Sanzō-Shinzan Co., Ltd.）" },
         { label: "略称", value: "三新（さんしん）、SS鉄道" },
@@ -11,9 +13,7 @@
     ];
 </script>
 
-<section
-    class="relative bg-gradient-to-b from-emerald-50 to-white min-h-screen"
->
+<section class="relative bg-gradient-to-b from-emerald-50 to-white">
     <!-- ヒーローヘッダー -->
     <div class="relative overflow-hidden bg-emerald-700 text-white">
         <div class="max-w-6xl mx-auto px-6 py-16 md:py-24 text-center">
@@ -58,12 +58,14 @@
         </div>
 
         <!-- サマリーカード -->
-        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div
-                class="bg-white rounded-xl shadow ring-1 ring-gray-200 p-5 text-center"
+                class="bg-white rounded-xl shadow ring-1 ring-gray-200 p-3 text-center flex flex-col justify-center"
             >
-                <p class="text-sm text-gray-500">設立</p>
-                <p class="text-xl font-bold text-emerald-700">1957年5月1日</p>
+                <p class="text-sm text-gray-500 m-0">設立</p>
+                <p class="text-xl font-bold text-emerald-700 m-0">
+                    1957年5月1日
+                </p>
             </div>
             <div
                 class="bg-white rounded-xl shadow ring-1 ring-gray-200 p-5 text-center"
@@ -87,10 +89,4 @@
     </div>
 </section>
 
-<svelte:head>
-    <title>会社概要 | 三蔵新山株式会社</title>
-    <meta
-        name="description"
-        content="三蔵新山株式会社（Sanzō-Shinzan Co., Ltd.）の会社概要。設立、資本金、所在地、代表者、従業員数などの基本情報。"
-    />
-</svelte:head>
+<VoicePart />
