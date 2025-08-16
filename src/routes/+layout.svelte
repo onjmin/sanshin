@@ -59,10 +59,9 @@
 	<!-- フッター -->
 	<footer class="border-t bg-white mt-12">
 		<div
-			class="max-w-6xl mx-auto px-4 py-4 text-xs text-gray-500 text-center"
+			class="max-w-6xl mx-auto px-4 py-4 text-xs text-red-600 text-center"
 		>
-			This site is a joke website created based on the 2ch thread "Let's
-			make a cheap new train and troll train spotters lol".
+			このサイトはおーぷん２ちゃんねるのスレ「安価で新しい電車作って撮り鉄釣ろうぜwwwww」で作られたジョークサイトです。
 		</div>
 	</footer>
 </div>
