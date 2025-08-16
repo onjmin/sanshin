@@ -1,9 +1,28 @@
-<!-- src/routes/+layout.svelte -->
 <script lang="ts">
 	import "../app.css";
 	import { resolve } from "$app/paths";
+	import { page } from "$app/state";
+	import { derived } from "svelte/store";
 
-	export let data;
+	const routes = [
+		"/",
+		"/company",
+		"/recruit",
+		"/timetable",
+		"/ekiben",
+		"/news",
+	] as const;
+
+	type Route = (typeof routes)[number];
+
+	const pages: { href: Route; label: string }[] = [
+		{ href: "/", label: "ホーム" },
+		{ href: "/company", label: "会社概要" },
+		{ href: "/recruit", label: "採用情報" },
+		{ href: "/timetable", label: "時刻表" },
+		{ href: "/ekiben", label: "駅弁" },
+		{ href: "/news", label: "ニュース" },
+	];
 </script>
 
 <div class="min-h-dvh flex flex-col bg-gray-50 text-gray-900 antialiased">
@@ -26,7 +45,7 @@
 				</span>
 			</a>
 
-			<!-- ナビゲーション -->
+			<!-- ヘッダー右側のナビ -->
 			<nav class="flex items-center gap-6 text-sm font-medium">
 				<a
 					href="timetable"
@@ -50,6 +69,22 @@
 		<div
 			class="h-1 bg-gradient-to-r from-emerald-600 via-cyan-500 to-emerald-600"
 		></div>
+
+		<!-- パンくずっぽいナビゲーション -->
+		<nav class="flex gap-4 px-4 py-2 bg-emerald-700 text-white text-sm">
+			{#each pages as p}
+				<a
+					href={resolve(p.href)}
+					class={`px-3 py-1 rounded-md transition-colors
+        {$page.url.pathname.startsWith(p.href)
+          ? 'bg-emerald-500 font-semibold'
+          : 'hover:bg-emerald-600'}
+      `}
+				>
+					{p.label}
+				</a>
+			{/each}
+		</nav>
 	</header>
 
 	<!-- メイン -->
