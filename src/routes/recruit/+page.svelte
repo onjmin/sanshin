@@ -93,12 +93,12 @@
     </section>
 
     <!-- 情報カード -->
+    <!-- 情報カード -->
     <section class="grid sm:grid-cols-2 gap-8">
         {#each cards as card}
             <div
                 class={`bg-gradient-to-br ${card.color} rounded-3xl shadow-xl p-8 transform hover:-translate-y-2 hover:shadow-2xl transition-transform`}
             >
-                <!-- アイコンをフロー内に配置 -->
                 <div class="flex justify-center mb-4">
                     <svelte:component
                         this={card.icon}
@@ -112,25 +112,8 @@
                     {card.title}
                 </h3>
 
-                <ul
-                    class="list-disc list-inside text-gray-700 space-y-1 text-sm"
-                >
-                    {#each card.content as line}
-                        <li>{line}</li>
-                    {/each}
-                </ul>
-
-                {#if card.notes}
-                    <ul
-                        class="list-inside text-green-700 space-y-1 mt-2 text-sm"
-                    >
-                        {#each card.notes as note}
-                            <li>✅ {note}</li>
-                        {/each}
-                    </ul>
-                {/if}
-
                 {#if card.isNote}
+                    <!-- HTMLを直接表示 -->
                     <p
                         class="mt-2 text-gray-600 italic border-l-4 border-purple-400 pl-3"
                     >
@@ -141,6 +124,25 @@
                     >
                         {card.content[1]}
                     </p>
+                {:else}
+                    <!-- 通常の箇条書き -->
+                    <ul
+                        class="list-disc list-inside text-gray-700 space-y-1 text-sm"
+                    >
+                        {#each card.content as line}
+                            <li>{line}</li>
+                        {/each}
+                    </ul>
+                {/if}
+
+                {#if card.notes && !card.isNote}
+                    <ul
+                        class="list-inside text-green-700 space-y-1 mt-2 text-sm"
+                    >
+                        {#each card.notes as note}
+                            <li>✅ {note}</li>
+                        {/each}
+                    </ul>
                 {/if}
             </div>
         {/each}
