@@ -32,6 +32,11 @@
 					>会社概要</a
 				>
 				<a
+					href="timetable"
+					class="text-gray-700 hover:text-emerald-700 transition-colors"
+					>運行時間</a
+				>
+				<a
 					href="news"
 					class="text-gray-700 hover:text-emerald-700 transition-colors"
 					>ニュース</a
