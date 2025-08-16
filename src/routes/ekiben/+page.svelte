@@ -66,14 +66,68 @@
     ];
 
     const souvenirList = [
-        "信州りんごゼリー",
-        "三蔵名物 みそまんじゅう",
-        "焼き芋チップス",
-        "国際信州学院オリジナルブレンドコーヒー豆",
-        "三新鉄道オリジナルグッズ",
-        "地元産ハチミツセット",
-        "焼き栗（季節限定）",
-        "信州味噌スープ（インスタント）",
+        {
+            name: "岬矢特製 信州りんごゼリー",
+            price: "320円 / 3個 900円",
+            description:
+                "信州の契約農家から仕入れた完熟りんごを贅沢に使ったオリジナルゼリー。ひんやりとした口当たりとしゃきっとした果肉の食感が特徴。",
+            shop: "岬矢（みさきや）",
+        },
+        {
+            name: "三蔵名物 みそまんじゅう",
+            price: "1個 160円 / 5個入 750円",
+            description:
+                "信州産米味噌を練り込んだ餡をふわふわ生地で包んだ伝統のまんじゅう。甘さと塩気が絶妙。",
+        },
+        {
+            name: "焼き芋チップス",
+            price: "450円",
+            description:
+                "低温でじっくり揚げた地元産紅はるか使用。パリッと軽い食感で自然な甘みが広がるノンフライ・無添加商品。",
+        },
+        {
+            name: "国際信州学院オリジナルブレンドコーヒー豆",
+            price: "100g 780円 / 200g 1,400円",
+            description:
+                "地元名門・国際信州学院の学生と焙煎所が共同開発した中深煎りブレンド。旅のおともやお土産に最適。",
+        },
+        {
+            name: "三新鉄道オリジナルグッズ",
+            price: "280円〜2,200円",
+            description:
+                "路線図ハンドタオル、限定ピンバッジ、車掌帽型キーホルダーなど。乗り鉄にも人気。",
+        },
+        {
+            name: "地元産ハチミツセット",
+            price: "2本セット 1,350円",
+            description:
+                "高尾山高原のアカシアとレンゲの純粋はちみつ。香りとコクを瓶に詰めました。トーストや紅茶に。",
+        },
+        {
+            name: "焼き栗（季節限定）",
+            price: "300g 600円",
+            period: "9月中旬〜12月初旬",
+            description:
+                "秋限定、地元山間部産の大粒和栗を炭火で焼き上げ。ほくほく甘みが魅力。皮むき済みで食べやすい。",
+        },
+        {
+            name: "信州味噌スープ（インスタント）",
+            price: "1食 180円 / 5食セット 800円",
+            description:
+                "信州味噌のコクが効いた即席スープ。地元野菜乾燥チップ入り。登山や旅の途中に便利。",
+        },
+        {
+            name: "やきう駅長缶バッジセット",
+            price: "1,200円",
+            description:
+                "昭和レトロ風『運転士やきう』『特急乗車券やきう』などシリーズ。台紙はマルタ96の時刻表風。",
+        },
+        {
+            name: "やきうの肉球クッキー",
+            price: "3枚 500円",
+            description:
+                "猫の肉球型サブレ。味は『抹茶』『いちご』『キャラメル』の3種類。",
+        },
     ];
 </script>
 
@@ -180,9 +234,21 @@
         <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {#each souvenirList as s}
                 <div
-                    class="bg-white rounded-xl shadow p-4 text-center text-sm font-medium text-gray-700 hover:bg-emerald-50 transition-colors"
+                    class="bg-white rounded-xl shadow p-4 text-center hover:bg-emerald-50 transition-colors"
                 >
-                    {s}
+                    <h3 class="text-lg font-semibold text-emerald-700">
+                        {s.name}
+                    </h3>
+                    <p class="text-gray-600 text-sm mb-2">{s.description}</p>
+                    <p class="text-gray-800 font-medium">{s.price}</p>
+                    {#if s.shop}
+                        <p class="text-gray-500 text-xs mt-1">{s.shop}</p>
+                    {/if}
+                    {#if s.period}
+                        <p class="text-gray-500 text-xs mt-1">
+                            販売期間: {s.period}
+                        </p>
+                    {/if}
                 </div>
             {/each}
         </div>
