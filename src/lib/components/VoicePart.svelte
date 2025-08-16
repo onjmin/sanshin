@@ -108,50 +108,45 @@
 
 <section class="bg-emerald-50 py-12">
     <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-emerald-700 mb-8 text-center">
+        <h2 class="text-3xl font-bold text-emerald-700 mb-6 text-center">
             利用者の声
         </h2>
 
-        <ul class="space-y-3">
-            {#each voices as v, i}
-                <li class="bg-white rounded-xl shadow ring-1 ring-gray-200">
-                    <button
-                        class="w-full flex justify-between items-start p-4 hover:bg-emerald-50 transition-colors text-left"
-                        on:click={() => toggle(i)}
-                    >
-                        <div>
-                            <p class="font-semibold text-gray-800">
-                                {v.name}{v.age
-                                    ? ` (${v.age})`
-                                    : ""}{v.occupation
-                                    ? `・${v.occupation}`
-                                    : ""}
-                            </p>
-                            {#if v.location}
-                                <p class="text-gray-500 text-sm">
-                                    {v.location}
+        <!-- 高さを固定してスクロール可能に -->
+        <div
+            class="bg-white rounded-xl shadow ring-1 ring-gray-200 h-[500px] overflow-y-auto p-4"
+        >
+            <ul class="space-y-3">
+                {#each voices as v, i}
+                    <li class="border-b border-gray-200 pb-2 last:border-b-0">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-semibold text-gray-800">
+                                    {v.name}{v.age
+                                        ? ` (${v.age})`
+                                        : ""}{v.occupation
+                                        ? `・${v.occupation}`
+                                        : ""}
                                 </p>
-                            {/if}
+                                {#if v.location}
+                                    <p class="text-gray-500 text-sm">
+                                        {v.location}
+                                    </p>
+                                {/if}
+                            </div>
+                            <span
+                                class="text-xs px-2 py-1 rounded-full {v.type ===
+                                '感想'
+                                    ? 'bg-emerald-100 text-emerald-800'
+                                    : 'bg-red-100 text-red-700'}"
+                            >
+                                {v.type}
+                            </span>
                         </div>
-                        <span
-                            class="text-xs px-2 py-1 rounded-full {v.type ===
-                            '感想'
-                                ? 'bg-emerald-100 text-emerald-800'
-                                : 'bg-red-100 text-red-700'}"
-                        >
-                            {v.type}
-                        </span>
-                    </button>
-
-                    {#if $openIndexes.includes(i)}
-                        <div
-                            class="px-4 pb-4 text-gray-700 text-sm border-t border-gray-200"
-                        >
-                            {v.text}
-                        </div>
-                    {/if}
-                </li>
-            {/each}
-        </ul>
+                        <p class="text-gray-700 text-sm mt-1">{v.text}</p>
+                    </li>
+                {/each}
+            </ul>
+        </div>
     </div>
 </section>
