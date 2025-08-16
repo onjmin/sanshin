@@ -69,23 +69,41 @@
         >
             ニュースリリース
         </h2>
-        <ul class="space-y-4">
+        <ul class="space-y-2">
             <li class="border-b pb-2">
                 <span class="text-sm text-gray-500 mr-2">2025/08/10</span>
                 <a
                     href="news/20250810"
                     class="text-emerald-700 font-medium hover:underline"
                 >
-                    新線「三山本線」延伸計画を発表
+                    「情表倉駅」駅名決定！
                 </a>
             </li>
             <li class="border-b pb-2">
                 <span class="text-sm text-gray-500 mr-2">2025/07/30</span>
                 <a
-                    href="news/20250730"
+                    href="news/20250810"
                     class="text-emerald-700 font-medium hover:underline"
                 >
                     夏の観光キャンペーン開始
+                </a>
+            </li>
+            <li class="border-b pb-2">
+                <span class="text-sm text-gray-500 mr-2">2025/07/15</span>
+                <a
+                    href="news/20250810"
+                    class="text-emerald-700 font-medium hover:underline"
+                >
+                    第一工区の本格着工が始まりました
+                </a>
+            </li>
+            <li class="border-b pb-2">
+                <span class="text-sm text-gray-500 mr-2">2025/06/30</span>
+                <a
+                    href="news/20250810"
+                    class="text-emerald-700 font-medium hover:underline"
+                >
+                    新線「三山本線」延伸計画を発表
                 </a>
             </li>
         </ul>
