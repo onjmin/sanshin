@@ -16,7 +16,6 @@
 	type Route = (typeof routes)[number];
 
 	const pages: { href: Route; label: string }[] = [
-		{ href: "/", label: "ホーム" },
 		{ href: "/company", label: "会社概要" },
 		{ href: "/recruit", label: "採用情報" },
 		{ href: "/timetable", label: "時刻表" },
@@ -76,9 +75,11 @@
 				<a
 					href={resolve(p.href)}
 					class={`px-3 py-1 rounded-md transition-colors
-        {$page.url.pathname.startsWith(p.href)
-          ? 'bg-emerald-500 font-semibold'
-          : 'hover:bg-emerald-600'}
+        ${
+			page.url.pathname.startsWith(p.href)
+				? "bg-emerald-500 font-semibold"
+				: "hover:bg-emerald-600"
+		}
       `}
 				>
 					{p.label}
