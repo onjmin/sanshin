@@ -60,15 +60,9 @@
 	<!-- フッター -->
 	<footer class="border-t bg-white mt-12">
 		<div
-			class="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-600 flex flex-col sm:flex-row items-center justify-between gap-4"
+			class="max-w-6xl mx-auto px-4 py-4 text-xs text-gray-500 text-center"
 		>
-			<p>
-				© {new Date().getFullYear()} 三蔵新山株式会社（Sanzō-Shinzan Co.,
-				Ltd.）
-			</p>
-			<p class="italic text-emerald-700">
-				「都市と自然を、やさしくむすぶ」
-			</p>
+			このサイトはおーぷん２ちゃんねるのスレ「安価で新しい電車作って撮り鉄釣ろうぜwwwww」で作られたジョークサイトです。
 		</div>
 	</footer>
 </div>
