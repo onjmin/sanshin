@@ -67,7 +67,8 @@
 		<div
 			class="max-w-6xl mx-auto px-4 py-4 text-xs text-gray-500 text-center"
 		>
-			このサイトはおーぷん２ちゃんねるのスレ「安価で新しい電車作って撮り鉄釣ろうぜwwwww」で作られたジョークサイトです。
+			This site is a joke website created based on the 2ch thread "Let's
+			make a cheap new train and troll train spotters lol".
 		</div>
 	</footer>
 </div>
