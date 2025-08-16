@@ -1,3 +1,7 @@
+<script>
+    import VoicePart from "$lib/components/VoicePart.svelte";
+</script>
+
 <section
     class="relative bg-gradient-to-b from-emerald-50 to-white min-h-screen"
 >
@@ -107,6 +111,7 @@
             </a>
         </div>
     </div>
+    <VoicePart />
 </section>
 
 <svelte:head>
