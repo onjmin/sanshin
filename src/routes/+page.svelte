@@ -36,7 +36,7 @@
                     採用情報
                 </a>
                 <a
-                    href="contact"
+                    href="https://hayabusa.open2ch.net/test/read.cgi/livejupiter/1755327173/l30"
                     class="px-6 py-3 bg-white text-emerald-700 font-semibold rounded-full shadow hover:bg-gray-100"
                 >
                     お問い合わせ

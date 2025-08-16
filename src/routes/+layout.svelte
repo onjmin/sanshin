@@ -43,11 +43,6 @@
 					class="text-gray-700 hover:text-emerald-700 transition-colors"
 					>ニュース</a
 				>
-				<a
-					href="recruit"
-					class="text-gray-700 hover:text-emerald-700 transition-colors"
-					>採用</a
-				>
 			</nav>
 		</div>
 
