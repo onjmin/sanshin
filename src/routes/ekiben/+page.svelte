@@ -188,3 +188,11 @@
         </div>
     </section>
 </main>
+
+<svelte:head>
+    <title>駅弁情報 | 三蔵新山株式会社（SS鉄道）</title>
+    <meta
+        name="description"
+        content="三蔵新山株式会社（SS鉄道）の駅弁情報ページ。沿線の人気駅弁や季節限定商品、地元食材を使ったおすすめ駅弁を紹介しています。"
+    />
+</svelte:head>

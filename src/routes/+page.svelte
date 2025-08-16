@@ -90,3 +90,11 @@
 </section>
 
 <VoicePart />
+
+<svelte:head>
+    <title>三蔵新山株式会社（SS鉄道） | 都市と自然を、やさしくむすぶ</title>
+    <meta
+        name="description"
+        content="三蔵新山株式会社（SS鉄道）の公式サイト。沿線情報、運行情報、駅・車両の特徴、沿線の観光・地域情報などをご紹介します。"
+    />
+</svelte:head>

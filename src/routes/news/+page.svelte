@@ -85,3 +85,11 @@
         </div>
     </div>
 </section>
+
+<svelte:head>
+    <title>ニュース | 三蔵新山株式会社（SS鉄道）</title>
+    <meta
+        name="description"
+        content="三蔵新山株式会社（SS鉄道）の最新ニュースやお知らせ。鉄道運行情報や地域との取り組み、環境への配慮などを掲載しています。"
+    />
+</svelte:head>
