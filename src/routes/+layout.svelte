@@ -15,7 +15,7 @@
 			<!-- ロゴ -->
 			<a href={resolve("/")} class="flex items-center gap-3">
 				<img
-					src="https://i.imgur.com/vbiQhM0.png"
+					src="https://i.imgur.com/AQV3TtI.png"
 					alt="三蔵新山株式会社"
 					class="w-10 h-10 rounded-lg shadow"
 				/>
