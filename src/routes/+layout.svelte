@@ -1,6 +1,8 @@
 <!-- src/routes/+layout.svelte -->
 <script lang="ts">
 	import "../app.css";
+	import { resolve } from "$app/paths";
+
 	export let data;
 </script>
 
@@ -11,7 +13,7 @@
 			class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4"
 		>
 			<!-- ロゴ -->
-			<a href="/" class="flex items-center gap-3">
+			<a href={resolve("/")} class="flex items-center gap-3">
 				<span
 					class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-emerald-700 text-white font-bold text-lg shadow"
 				>
