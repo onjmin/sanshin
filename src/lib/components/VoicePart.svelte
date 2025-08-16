@@ -150,7 +150,7 @@
 
 <section class="bg-emerald-50 py-12">
     <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-emerald-700 mb-6 text-center">
+        <h2 class="text-3xl font-bold text-emerald-700 mb-2 text-center">
             利用者の声
         </h2>
 
@@ -190,5 +190,9 @@
                 {/each}
             </ul>
         </div>
+
+        <p class="text-center text-gray-500 text-sm mb-6 my-3">
+            駅舎で実施したアンケートにご協力いただいた皆さまの声を掲載しています。
+        </p>
     </div>
 </section>
