@@ -39,7 +39,7 @@
 					href={resolve(p.href)}
 					class={`px-3 py-1 rounded-md transition-colors
         ${
-			p.href !== "/" && page.url.pathname.startsWith(p.href)
+			p.href !== "/" && page.url.pathname.includes(p.href)
 				? "bg-emerald-500 font-semibold"
 				: "hover:bg-emerald-600"
 		}
