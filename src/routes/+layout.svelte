@@ -15,7 +15,7 @@
 			<!-- ロゴ -->
 			<a href={resolve("/")} class="flex items-center gap-3">
 				<img
-					src="https://i.imgur.com/A1jWadO.png"
+					src="https://i.imgur.com/vbiQhM0.png"
 					alt="三蔵新山株式会社"
 					class="w-10 h-10 rounded-lg shadow"
 				/>
@@ -32,6 +32,11 @@
 					href="timetable"
 					class="text-gray-700 hover:text-emerald-700 transition-colors"
 					>時刻表</a
+				>
+				<a
+					href="ekiben"
+					class="text-gray-700 hover:text-emerald-700 transition-colors"
+					>駅弁</a
 				>
 				<a
 					href="news"
