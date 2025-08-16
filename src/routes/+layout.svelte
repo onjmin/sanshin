@@ -47,19 +47,9 @@
 			<!-- ヘッダー右側のナビ -->
 			<nav class="flex items-center gap-6 text-sm font-medium">
 				<a
-					href="timetable"
+					href="company"
 					class="text-gray-700 hover:text-emerald-700 transition-colors"
-					>時刻表</a
-				>
-				<a
-					href="ekiben"
-					class="text-gray-700 hover:text-emerald-700 transition-colors"
-					>駅弁</a
-				>
-				<a
-					href="news"
-					class="text-gray-700 hover:text-emerald-700 transition-colors"
-					>ニュース</a
+					>会社概要</a
 				>
 			</nav>
 		</div>
