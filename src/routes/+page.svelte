@@ -59,7 +59,7 @@
             <li class="border-b pb-2">
                 <span class="text-sm text-gray-500 mr-2">2025/08/10</span>
                 <a
-                    href="/news/20250810"
+                    href="news/20250810"
                     class="text-emerald-700 font-medium hover:underline"
                 >
                     新線「三山本線」延伸計画を発表
@@ -68,7 +68,7 @@
             <li class="border-b pb-2">
                 <span class="text-sm text-gray-500 mr-2">2025/07/30</span>
                 <a
-                    href="/news/20250730"
+                    href="news/20250730"
                     class="text-emerald-700 font-medium hover:underline"
                 >
                     夏の観光キャンペーン開始
