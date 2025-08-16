@@ -43,7 +43,7 @@
                     路線マップ（横長）
                 </h2>
                 <img
-                    src="https://i.imgur.com/vfEDEiV.png"
+                    src="https://i.imgur.com/Wye9nsN.png"
                     alt="横方向路線図"
                     class="rounded-xl shadow-lg border border-gray-200 w-full object-contain"
                 />
