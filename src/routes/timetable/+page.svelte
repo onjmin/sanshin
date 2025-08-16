@@ -30,17 +30,17 @@
         <h1
             class="text-3xl md:text-4xl font-bold text-emerald-800 mb-6 border-l-4 border-emerald-600 pl-3"
         >
-            運行時間表
+            電車の時刻と路線図
         </h1>
         <p class="text-gray-700 mb-8">
-            主な駅の始発から午前8:30までの運行時間です。
+            朝の電車の時刻や路線マップをまとめています。お出かけ前にチェックしてください。
         </p>
 
-        <!-- 横並び路線図 -->
-        <div class="mb-10 flex flex-col md:flex-row gap-6 overflow-x-auto">
+        <!-- 路線図（横並び） -->
+        <div class="flex flex-col md:flex-row gap-6 mb-6">
             <div class="flex-1 min-w-[300px]">
                 <h2 class="text-lg font-semibold text-emerald-700 mb-2">
-                    横方向路線図
+                    路線マップ（横長）
                 </h2>
                 <img
                     src="https://i.imgur.com/vfEDEiV.png"
@@ -50,7 +50,7 @@
             </div>
             <div class="flex-1 min-w-[300px]">
                 <h2 class="text-lg font-semibold text-emerald-700 mb-2">
-                    円形路線図
+                    路線マップ（ぐるっと型）
                 </h2>
                 <img
                     src="https://i.imgur.com/734TryY.png"
@@ -60,13 +60,14 @@
             </div>
         </div>
 
-        <!-- 運行時間表 -->
+        <!-- 運行時刻表 -->
         <div class="overflow-x-auto bg-white shadow-lg rounded-2xl">
             <table class="min-w-full divide-y divide-gray-200 text-center">
-                <thead class="bg-emerald-700 text-white">
+                <thead class="bg-emerald-700 text-white rounded-t-2xl">
                     <tr>
                         {#each headers as header}
-                            <th class="px-6 py-3 text-sm font-medium"
+                            <th
+                                class="px-6 py-3 text-sm font-medium rounded-t-lg"
                                 >{header}</th
                             >
                         {/each}
@@ -97,9 +98,9 @@
 </section>
 
 <svelte:head>
-    <title>運行時間・路線図 | 三蔵新山株式会社</title>
+    <title>電車の時刻と路線図 | 三蔵新山株式会社</title>
     <meta
         name="description"
-        content="三蔵新山株式会社（SS鉄道）の運行時間表と路線図。主要駅の時刻や路線の位置を掲載しています。"
+        content="三蔵新山株式会社（SS鉄道）の路線マップと電車の時刻。朝の主要駅の運行情報を掲載しています。"
     />
 </svelte:head>
