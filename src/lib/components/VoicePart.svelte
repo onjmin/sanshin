@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { writable } from "svelte/store";
+
     interface Voice {
         type: "感想" | "批評";
         name: string;
@@ -66,7 +68,42 @@
             name: "40代・主婦",
             text: "女性専用車両がないことから女性への配慮が足りていないと思いますがこれは差別ではないのですか？",
         },
+        {
+            type: "感想",
+            name: "60代男性",
+            text: "女性専用車両に入った途端、素晴らしい女子高生の汗とムワッとしたナニカが匂ってきた。部活帰りの女子高生が多かった。とても良い体験でした！世間では批判があるでしょうけど、専用車両をもっと増やすbきです！",
+        },
+        {
+            type: "批評",
+            name: "30代/女性",
+            text: "女性専用車両に乗っていたら50歳位のはげた男が乗ってきました。本当に迷惑です。",
+        },
+        {
+            type: "批評",
+            name: "50代/男性",
+            text: "電車に乗ったらなぜかおばさんに怒られました。今も理不尽すぎて怒りが収まりません",
+        },
+        {
+            type: "批評",
+            name: "40代男性（会社員）",
+            text: "駅のトイレに入ろうとしたら、3つある個室のうち2つが「使用禁止」の張り紙。残り1つに長蛇の列。毎朝これでは用を足す前に電車に遅れます。修理はいつ終わるのでしょうか。",
+        },
+        {
+            type: "批評",
+            name: "80代男性",
+            text: "この駅のトイレがうち２つも故障していた。これでは電車に間に合わないと思い、駅のホームにて大便と小便をしたところ、近くにいた駅員に蹴り飛ばされ私は気がついたら病院のベットの上にいた。大便をしている最中に意識を失ったので、病院のベッドでも続けて脱糞してしまった。恥ずかしい思いをしました。駅員を許せません。",
+        },
     ];
+
+    const openIndexes = writable<number[]>([]);
+
+    function toggle(index: number) {
+        openIndexes.update((arr) =>
+            arr.includes(index)
+                ? arr.filter((i) => i !== index)
+                : [...arr, index],
+        );
+    }
 </script>
 
 <section class="bg-emerald-50 py-12">
@@ -75,12 +112,13 @@
             利用者の声
         </h2>
 
-        <div class="grid md:grid-cols-2 gap-6">
-            {#each voices as v}
-                <div
-                    class="bg-white rounded-2xl shadow p-6 hover:shadow-lg transition-shadow"
-                >
-                    <div class="flex items-center justify-between mb-3">
+        <ul class="space-y-3">
+            {#each voices as v, i}
+                <li class="bg-white rounded-xl shadow ring-1 ring-gray-200">
+                    <button
+                        class="w-full flex justify-between items-start p-4 hover:bg-emerald-50 transition-colors text-left"
+                        on:click={() => toggle(i)}
+                    >
                         <div>
                             <p class="font-semibold text-gray-800">
                                 {v.name}{v.age
@@ -99,12 +137,21 @@
                             class="text-xs px-2 py-1 rounded-full {v.type ===
                             '感想'
                                 ? 'bg-emerald-100 text-emerald-800'
-                                : 'bg-red-100 text-red-700'}">{v.type}</span
+                                : 'bg-red-100 text-red-700'}"
                         >
-                    </div>
-                    <p class="text-gray-700 text-sm">{v.text}</p>
-                </div>
+                            {v.type}
+                        </span>
+                    </button>
+
+                    {#if $openIndexes.includes(i)}
+                        <div
+                            class="px-4 pb-4 text-gray-700 text-sm border-t border-gray-200"
+                        >
+                            {v.text}
+                        </div>
+                    {/if}
+                </li>
             {/each}
-        </div>
+        </ul>
     </div>
 </section>
