@@ -1,42 +1,58 @@
 <script lang="ts">
-	import "../app.css";
-	import favicon from "$lib/assets/favicon.svg";
-	import { resolve } from "$app/paths";
-
-	const { children } = $props();
+	export let data;
 </script>
 
-<svelte:head>
-	<link rel="icon" href={favicon} />
-	<title>ねんどろいどショップ</title>
-</svelte:head>
-
-<div class="min-h-screen flex flex-col bg-gray-900 text-gray-100">
-	<!-- ヘッダー -->
-	<header class="bg-gray-800 shadow">
+<div class="min-h-dvh flex flex-col bg-gray-50 text-gray-900">
+	<header
+		class="border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60"
+	>
 		<div
-			class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center"
+			class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between gap-4"
 		>
-			<h1 class="text-xl font-bold text-blue-400">
-				ねんどろいどショップ
-			</h1>
-			<nav class="flex gap-4 text-sm font-medium">
-				<a href={resolve("/")} class="hover:text-blue-300">ホーム</a>
-				<a href="cart" class="hover:text-blue-300">カート</a>
-				<a href="faq" class="hover:text-blue-300">お問い合わせ</a>
+			<a
+				href="/"
+				class="inline-flex items-center gap-2 font-semibold text-lg tracking-tight"
+			>
+				<span
+					class="inline-grid place-items-center w-8 h-8 rounded-xl bg-emerald-600 text-white font-bold"
+					>SS</span
+				>
+				<span>三蔵新山株式会社</span>
+			</a>
+			<nav class="flex items-center gap-5 text-sm">
+				<a href="/" class="hover:underline underline-offset-4"
+					>会社概要</a
+				>
+				<a href="/news" class="hover:underline underline-offset-4"
+					>ニュース</a
+				>
+				<a href="/contact" class="hover:underline underline-offset-4"
+					>お問い合わせ</a
+				>
 			</nav>
 		</div>
 	</header>
 
-	<!-- メインコンテンツ -->
-	<main class="flex-1 max-w-6xl mx-auto w-full px-4 py-6">
-		{@render children?.()}
+	<main class="flex-1">
+		<slot />
 	</main>
 
-	<!-- フッター -->
-	<footer
-		class="bg-gray-800 border-t border-gray-700 py-4 mt-8 text-center text-sm text-gray-400"
-	>
-		&copy; 2025 ねんどろいどショップ. All rights reserved.
+	<footer class="border-t bg-white">
+		<div
+			class="max-w-5xl mx-auto px-4 py-6 text-sm text-gray-600 flex flex-wrap items-center justify-between gap-3"
+		>
+			<p>
+				© {new Date().getFullYear()} 三蔵新山株式会社（Sanzō‑Shinzan Co.,
+				Ltd.）
+			</p>
+			<p class="italic">スローガン：『都市と自然を、やさしくむすぶ』</p>
+		</div>
 	</footer>
 </div>
+
+<style>
+	/* 画面幅が極端に広いときの可読性確保 */
+	:global(body) {
+		@apply antialiased;
+	}
+</style>
