@@ -13,7 +13,9 @@
     ];
 </script>
 
-<section class="relative bg-gradient-to-b from-emerald-50 to-white">
+<section
+    class="relative bg-gradient-to-b from-emerald-50 to-white min-h-screen"
+>
     <!-- ヒーローヘッダー -->
     <div class="relative overflow-hidden bg-emerald-700 text-white">
         <div class="max-w-6xl mx-auto px-6 py-16 md:py-24 text-center">
@@ -87,9 +89,8 @@
             </div>
         </div>
     </div>
+    <VoicePart />
 </section>
-
-<VoicePart />
 
 <svelte:head>
     <title>三蔵新山株式会社（SS鉄道） | 都市と自然を、やさしくむすぶ</title>
