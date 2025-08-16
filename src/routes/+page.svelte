@@ -2,7 +2,7 @@
     const profile: { label: string; value: string }[] = [
         { label: "社名", value: "三蔵新山株式会社（Sanzō-Shinzan Co., Ltd.）" },
         { label: "略称", value: "三新（さんしん）、SS鉄道" },
-        { label: "本社所在地", value: "東京都文京区三山町1-45（架空住所）" },
+        { label: "本社所在地", value: "東京都文京区三山町1-45" },
         { label: "設立", value: "1957年（昭和32年）5月1日" },
         { label: "資本金", value: "150億円（非上場）" },
         { label: "代表取締役社長", value: "新山透（しんざん とおる）" },
