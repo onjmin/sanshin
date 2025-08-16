@@ -70,7 +70,7 @@
             <img
                 src="https://i.imgur.com/slWStq9.png"
                 alt="岬矢"
-                class="w-16 h-16 rounded-lg shadow-md"
+                class="h-16 w-auto rounded-lg shadow-md"
             />
             <h1 class="text-3xl font-bold text-emerald-800">岬矢 駅弁販売</h1>
         </div>
@@ -94,7 +94,7 @@
                             <img
                                 src="https://i.imgur.com/slWStq9.png"
                                 alt="岬矢"
-                                class="absolute top-3 left-3 w-12 h-12 rounded-lg shadow-md bg-white p-1 z-10"
+                                class="absolute top-3 left-3 w-auto h-12 rounded-lg shadow-md bg-white p-1 z-10"
                             />
                             <img
                                 src={ekiben.image}
