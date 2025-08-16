@@ -36,12 +36,37 @@
             主な駅の始発から午前8:30までの運行時間です。
         </p>
 
+        <!-- 横並び路線図 -->
+        <div class="mb-10 flex flex-col md:flex-row gap-6 overflow-x-auto">
+            <div class="flex-1 min-w-[300px]">
+                <h2 class="text-lg font-semibold text-emerald-700 mb-2">
+                    横方向路線図
+                </h2>
+                <img
+                    src="https://i.imgur.com/vfEDEiV.png"
+                    alt="横方向路線図"
+                    class="rounded-xl shadow-lg border border-gray-200 w-full object-contain"
+                />
+            </div>
+            <div class="flex-1 min-w-[300px]">
+                <h2 class="text-lg font-semibold text-emerald-700 mb-2">
+                    円形路線図
+                </h2>
+                <img
+                    src="https://i.imgur.com/734TryY.png"
+                    alt="円形路線図"
+                    class="rounded-xl shadow-lg border border-gray-200 w-full object-contain"
+                />
+            </div>
+        </div>
+
+        <!-- 運行時間表 -->
         <div class="overflow-x-auto bg-white shadow-lg rounded-2xl">
             <table class="min-w-full divide-y divide-gray-200 text-center">
                 <thead class="bg-emerald-700 text-white">
                     <tr>
                         {#each headers as header}
-                            <th class="px-4 py-2 text-sm font-medium"
+                            <th class="px-6 py-3 text-sm font-medium"
                                 >{header}</th
                             >
                         {/each}
@@ -57,11 +82,11 @@
                                 : ''}"
                         >
                             <td
-                                class="px-4 py-2 font-medium text-left text-emerald-800"
+                                class="px-6 py-3 font-medium text-left text-emerald-800"
                                 >{row.station}</td
                             >
                             {#each row.times as time}
-                                <td class="px-4 py-2">{time}</td>
+                                <td class="px-6 py-3">{time}</td>
                             {/each}
                         </tr>
                     {/each}
@@ -72,9 +97,9 @@
 </section>
 
 <svelte:head>
-    <title>運行時間 | 三蔵新山株式会社</title>
+    <title>運行時間・路線図 | 三蔵新山株式会社</title>
     <meta
         name="description"
-        content="三蔵新山株式会社（SS鉄道）の運行時間表。主要駅の始発から午前中までの時刻を掲載しています。"
+        content="三蔵新山株式会社（SS鉄道）の運行時間表と路線図。主要駅の時刻や路線の位置を掲載しています。"
     />
 </svelte:head>
