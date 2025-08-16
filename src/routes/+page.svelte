@@ -48,7 +48,7 @@
             class="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-emerald-600 via-cyan-500 to-emerald-600"
         ></div>
         <span class="absolute bottom-2 right-4 text-xs opacity-70"
-            >※これはフィクションです</span
+            >※This web site is a fiction.</span
         >
     </div>
 
