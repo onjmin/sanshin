@@ -7,7 +7,14 @@
 >
     <!-- ヒーロー -->
     <div class="relative overflow-hidden bg-emerald-700 text-white">
-        <div class="max-w-6xl mx-auto px-6 py-16 md:py-24 text-center">
+        <!-- 背景画像 (半透明) -->
+        <div
+            class="absolute inset-0 bg-cover bg-center opacity-50"
+            style="background-image: url('https://i.imgur.com/gnxdDLE.jpeg');"
+        ></div>
+
+        <!-- コンテンツ -->
+        <div class="relative max-w-6xl mx-auto px-6 py-16 md:py-24 text-center">
             <h1 class="text-4xl md:text-5xl font-bold tracking-tight">
                 三蔵新山株式会社
             </h1>
@@ -44,12 +51,15 @@
             </div>
         </div>
 
+        <!-- 下部のグラデーション帯 -->
         <div
             class="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-emerald-600 via-cyan-500 to-emerald-600"
         ></div>
-        <span class="absolute bottom-2 right-4 text-xs opacity-70"
-            >※This web site is a fiction.</span
-        >
+
+        <!-- 注意書き -->
+        <span class="absolute bottom-2 right-4 text-xs opacity-70 text-red-500">
+            ※This web site is a fiction.
+        </span>
     </div>
 
     <!-- ニュースリリース -->
