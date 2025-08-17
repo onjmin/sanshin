@@ -30,6 +30,7 @@
 </script>
 
 <svelte:head>
+	<link rel="icon" href={image} />
 	<title>{title}</title>
 	<meta name="description" content={description} />
 
@@ -50,10 +51,6 @@
 	<link rel="apple-touch-icon" href={image} />
 
 	<meta name="theme-color" content="#047857" />
-
-	<script
-		src="https://cdn.jsdelivr.net/npm/gif.js.optimized/dist/gif.js"
-	></script>
 </svelte:head>
 
 <div class="min-h-dvh flex flex-col bg-gray-50 text-gray-900 antialiased">
